@@ -1,0 +1,33 @@
+Install Miniconda or Anaconda in your OS and foloow OS specific instructions to setup the environment
+
+Linux
+In terminal type
+    1. conda create --name=<name> python=3.11
+    2. conda activate <name>
+    3. conda install pytorch torchvision torchaudio cpuonly -c pytorch
+    4. pip install librosa
+    5. pip install soundfile
+    6. pip install matplotlib
+    7. pip install torchinfo
+
+
+Windows
+In Anaconda/Miniconda terminal type
+    1. conda create --name=<name> python=3.11
+    2. conda activate <name>
+    3. conda install pytorch torchvision torchaudio cpuonly -c pytorch
+    4. pip install librosa
+    5. pip install soundfile
+    6. pip install matplotlib
+    7. pip install torchinfo
+
+
+Mac
+In terminal type
+    1. conda create --name=<name> python=3.11
+    2. conda activate <name>
+    3. conda install pytorch::pytorch torchvision torchaudio -c pytorch
+    4. pip install librosa
+    5. pip install soundfile
+    6. pip install matplotlib
+    7. pip install torchinfo
