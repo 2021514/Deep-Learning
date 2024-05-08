@@ -282,7 +282,7 @@ class AETrainer:
     def visualize_tsne(self, epoch):
         embeddings = []
         with torch.no_grad():
-            for aug_images, _ in self.dataset:
+            for aug_images, _, _ in self.dataset:
                 aug_images = aug_images.to(self.device)
                 encoded = self.encoder(aug_images)
                 embeddings.append(encoded.view(encoded.size(0), -1).cpu().numpy())
@@ -369,7 +369,7 @@ class VAETrainer:
     def visualize_tsne(self, epoch):
         embeddings = []
         with torch.no_grad():
-            for aug_images, _ in self.dataset:
+            for aug_images, _, _ in self.dataset:
                 aug_images = aug_images.to(self.device)
                 mean, variance = self.encoder(aug_images)
                 output = self.reparameterize(mean, variance)
